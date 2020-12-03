@@ -1,6 +1,6 @@
 ---
 title: "Brownlows Bets"
-author: "Your Name"
+author: "Brooke De La Torre"
 date: "Year 2020"
 output: 
   html_document:
