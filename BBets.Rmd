@@ -22,13 +22,7 @@ require(knitr)
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
- At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
- 
-Report git commit structure:
-There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
-1. What are the fair odds for a bet on matching birthdays in a 35 person class.
-2. For what size class is a 2:1 odds bet fair.
-3. How much money would Brownlow be expected to end up with if the bets went as described.
+We will be showing the profit that Brownlow made from the bet he made with students regarding whether at least 2 people had birthdays on the same date.
 
 # Methods  
 
@@ -96,17 +90,16 @@ bank=0
 for(i in 1:637){
   class = sample(daysYEAR,35,replace=TRUE)
   n=length(unique(class))
-  if(n == 35)bank=bank-3
+  if(n == 35)bank=bank-5
   else bank=bank+1
 }
 results[j]=bank
 }
 hist(results)
 ```
-The amount that Dr. J would have to pay to make this a fair bet is
+The amount that Brownlow would have to pay to make this a fair bet is $5
 
 # number of students for a fair bet
-
   
 ```{r}
 results=vector("numeric")
@@ -122,6 +115,8 @@ results[j]=bank
 }
 hist(results)
 ```
+The amount of students that would have to partcipate for it to be a fair bet is 28.
+
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
   
@@ -131,4 +126,6 @@ hist(results)
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+
+The amount that Brownlow would have to pay to make this a fair bet meaning that the profit would balance at 0 is $5.The amount of students that would have to partcipate for it to be a fair bet is 28.The mean expected amount he could make is  281.731. 
 
